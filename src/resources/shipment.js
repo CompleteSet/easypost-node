@@ -30,6 +30,8 @@ export default (api) => {
       buyer_address: T.oneOfType([T.string, T.shape(Address.propTypes)]),
       parcel: T.oneOfType([T.string, T.shape(Parcel.propTypes)]),
       customs_info: T.oneOfType([T.string, T.shape(CustomsInfo.propTypes)]),
+      carrier_accounts: T.arrayOf(T.string),
+      carrier_account: T.string,
       scan_form: T.oneOfType([T.string, T.object]),
       forms: T.array,
       insurance: T.oneOfType([T.string, T.shape(Insurance.propTypes)]),
